@@ -20,7 +20,7 @@ public class Solution {
             }
         }
         return (numerator+" "+(n - numerator));
-    }
+    } // end of Fraction
     
     public static int gcd(int a, int b) {
         if(b == 0) {
@@ -29,7 +29,7 @@ public class Solution {
         else {
             return gcd(b, a % b);
         }
-    }
+    } // end of gcd
     
     public static int PolycarpAndLetters() {
         Scanner kb = new Scanner(System.in);
@@ -61,7 +61,7 @@ public class Solution {
         }
 
         return answer;
-    }
+    } // end of PolycarpAndLetters
 
 	    public static String MaximBuysAnApartment() {
         Long n, k;
@@ -83,7 +83,7 @@ public class Solution {
         }
         
        return (1 + " " + max);
-    }
+    } // end of MaximBuysAnApartment
     
     public static long TheEternalImmortality() throws Exception {
         
@@ -101,9 +101,8 @@ public class Solution {
             res = (res % 10) * (i % 10);
             if (res % 10 == 0)
             break;
-        }  
-        return (res % 10);
-    }
+        } return (res % 10);
+    } // end of TheEternalImmortality
 
 	public static String BarkToUnlock(){
 		
@@ -126,9 +125,45 @@ public class Solution {
 					return ("YES");
 				}
 			}
-		}
-	return ("NO");
-	}
+		} return ("NO");
+	} // end of BarkToUnlock
+
+	public static String DidYouMean() {
+        
+        Scanner input = new Scanner(System.in);
+        
+        String string = input.next();
+        int number = string.length();
+        int count = 0;
+        boolean isEqual = true;
+        
+        for (int i = 0; i < number; i++) {
+            if ((string.charAt(i) == 'a') || (string.charAt(i) == 'o') || (string.charAt(i) == 'e') || (string.charAt(i) == 'i') || (string.charAt(i) == 'u')) {
+                System.out.print(string.charAt(i));
+                count = 0;
+                isEqual = true;
+            } else { 
+                if (count == 0) {
+                   System.out.print(string.charAt(i));
+                   count++;
+                } else if (count == 1) {
+                    System.out.print(string.charAt(i));
+                    isEqual = isEqual && ((string.charAt(i) == string.charAt(i - 1)));
+                    count++;
+                } else if (count > 1) {
+                    if (isEqual && (string.charAt(i) == string.charAt(i - 1))) {
+                        System.out.print(string.charAt(i));
+                        count++;
+                    } else {
+                        System.out.print(" " + string.charAt(i));
+                        count = 1;
+                        isEqual = true;
+                    }
+                }
+            }
+        } return string;
+    } // end of DidYouMean
 
 
-}
+
+} // end of Solution
