@@ -186,7 +186,74 @@ public class Solution {
 		}
 	} // end of TimeRace
 
-
+	//Emeterio, Ricamelle 876A, 879A, 879B
+	public static int TripForMeal(int first, int second, int third, int fourth){
+		Scanner in = new Scanner(System.in);
+		
+		 first = in.nextInt();
+		 second = in.nextInt();
+		 third = in.nextInt();
+		 fourth = in.nextInt();
+		
+		if (first == 1) {
+			return (0);
+			
+		}else if (first == 2) {
+			return (Math.min(second,third));
+			
+		}else if (second <= third && second <= fourth) {
+			return ((first - 1) * second);
+			
+		}else if (third <= second && third < fourth) {
+			return ((first - 1) * third);
+			
+		}else {
+			return (Math.min(second, third) + (first - 2) * fourth);
+		}
+	}//end of 876A - trip for meal
+	
+	public static int boryaDiagnosis(int a, int b){
+		 Scanner in = new Scanner(System.in);
+        
+        a = 0;
+        b = in.nextInt();
+        
+        for (int x = 0; x < b; ++x){
+         	int j = in.nextInt();
+        	int k = in.nextInt();
+        	
+            while (j <= a){
+              	j += k;
+            } 
+            a = j;
+        } 
+       	return (a);
+    }//879A - borya's diagnosis
+    
+	public static long tableTennis(){
+		Scanner in = new Scanner(System.in);
+		
+		int a = in.nextInt();
+		long j = in.nextLong();
+		int b = in.nextInt();
+		long k = 0;
+		
+		for(int x = 1; x < a; x++) {
+			
+		int c = in.nextInt();
+			if(c > b) {
+				k = 1;
+				b = c;
+			} else {
+				k++;
+			}
+			if(k >= j) {
+				break;
+			}
+		}
+		return (b);
+		
+	}// end of 879B - Table Tennis 
 
 
 } // end of Solution
