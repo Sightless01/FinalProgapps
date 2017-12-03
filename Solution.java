@@ -89,19 +89,46 @@ public class Solution {
         
 	Scanner scan = new Scanner(System.in);
         
-        long a, b;
+        long a;
+        long b;
      
         a = scan.nextLong();
         b = scan.nextLong();
         
         long res = 1;
         
-        for (long i = a + 1; i <= b; i++) {
+        for (long i = a + 1 ; i <= b ; i++) {
             res = (res % 10) * (i % 10);
-            if (res % 10 == 0) break;
-        }
-        
+            if (res % 10 == 0)
+            break;
+        }  
         return (res % 10);
     }
-    
+
+	public static String BarkToUnlock(){
+		
+		Scanner scan = new Scanner(System.in);
+		
+		String pass = scan.next();
+		int n = scan.nextInt();
+		String[] words = new String[n];
+		
+		for (int i = 0 ; i < n ; i++){
+			words[i] = scan.next();
+		}
+
+		for(int x = 0 ; x < n ; x++){
+			
+			for(int y = 0 ; y < n ; y++){
+				String z = words[x] + words[y];
+				
+				if(z.contains(pass)){
+					return ("YES");
+				}
+			}
+		}
+	return ("NO");
+	}
+
+
 }
