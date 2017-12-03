@@ -84,4 +84,24 @@ public class Solution {
         
        return (1 + " " + max);
     }
+    
+    public static long TheEternalImmortality() throws Exception {
+        
+	Scanner scan = new Scanner(System.in);
+        
+        long a, b;
+     
+        a = scan.nextLong();
+        b = scan.nextLong();
+        
+        long res = 1;
+        
+        for (long i = a + 1; i <= b; i++) {
+            res = (res % 10) * (i % 10);
+            if (res % 10 == 0) break;
+        }
+        
+        return (res % 10);
+    }
+    
 }
