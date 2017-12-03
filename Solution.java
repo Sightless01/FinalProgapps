@@ -163,6 +163,29 @@ public class Solution {
             }
         } return string;
     } // end of DidYouMean
+	
+	// justine garcia #868B
+	public static String TimeRace (int h, int m, int s, int t1, int t2) {
+		if (t1>t2) {
+			int temp=t1; t1=t2; t2=temp; 
+		}
+		int ctr=0;
+		if (t1<=h && h<t2) {
+			ctr++;
+		} else if (t1<=(double)m/5 && (double)m/5<t2) {
+			ctr++;
+		} else if (t1<(double)s/5 && (double)s/5<t2) {
+			ctr++;
+		} else {
+			
+		}
+		if (ctr==0 || ctr==3) {
+			return "YES";
+		} else {
+			return "NO";
+		}
+	} // end of TimeRace
+
 
 
 
