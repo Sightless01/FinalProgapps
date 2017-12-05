@@ -313,4 +313,35 @@ public class Solution {
 
     		}
 		}//end of DidYouMean
+		
+		//Ivan Torcuato 
+		public static int declinedFinalist(int numFinalist, String list) {
+	
+			Scanner scan = new Scanner(list);
+			int num = Integer.parseInt(scan.next());
+			boolean check = true;
+			
+			while (scan.hasNext()) {
+				
+				int nextNum = Integer.parseInt(scan.next());
+				
+				if (num <= nextNum) {
+					
+					num = nextNum;
+					
+				}
+							
+			}
+			
+			if (num >= 25) {
+				
+				return num - 25;
+				
+			} else {
+				
+				return 0;
+				
+			}
+			
+		}
 } // end of Solution
