@@ -272,5 +272,45 @@ public class Solution {
 		}
 	}//end of 851 - Arpa and a Research in Mexican Wave
 
+//fayps uncoverted 858C
+	public class DidYouMean {
 
+    		public static void main(String[] args) {
+
+        		Scanner kbd = new Scanner(System.in);
+
+        		String input = kbd.next();
+       		 	int n = input.length();
+        		int count = 0;
+        		boolean isEqual = true;
+
+        		for (int i = 0; i < n; i++) {
+            		if ((input.charAt(i) == 'a') || (input.charAt(i) == 'e') || (input.charAt(i) == 'i') || (input.charAt(i) == 'o') || (input.charAt(i) == 'u')) {
+                		System.out.print(input.charAt(i));
+                		count = 0;
+                		isEqual = true;
+            		} else {
+                		if (count == 0) {
+                   		System.out.print(input.charAt(i));
+                   		count++;
+                		} else if (count == 1) {
+                    		System.out.print(input.charAt(i));
+                    		isEqual = isEqual && ((input.charAt(i) == input.charAt(i - 1)));
+                   		 count++;
+               		 } else
+               		 if (count > 1) {
+                		    if (isEqual && (input.charAt(i) == input.charAt(i - 1))) {
+                 		       System.out.print(input.charAt(i));
+                     		   count++;
+                  		  } else {
+                   		     System.out.print(" " + input.charAt(i));
+                     		   count=1;
+                    		    isEqual = true;
+                   		 }
+               		 }
+           		 }
+       		 }
+
+    		}
+		}//end of DidYouMean
 } // end of Solution
