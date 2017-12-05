@@ -254,6 +254,23 @@ public class Solution {
 		return (b);
 		
 	}// end of 879B - Table Tennis 
+	
+	//Almayda, Audry Jane 851A, 877C, 870C
+	public static int arpaAndAResearchInMexicanWave(int n, int k, int t) {
+		
+		Scanner kbd = new Scanner(System.in);
+		n = kbd.nextInt();
+		k = kbd.nextInt();
+		t = kbd.nextInt();{
+
+		if( t <= k && t <= n) {
+			return (t);
+		} else if(t <= n) {
+			return (k);
+		} else {
+			return(Math.max(0, k - (t - n)));
+		}
+	}//end of 851 - Arpa and a Research in Mexican Wave
 
 
 } // end of Solution
