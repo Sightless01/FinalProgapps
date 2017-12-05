@@ -1,6 +1,80 @@
 import java.util.*;
 
 public class Solution {
+    public static void TomRiddle(){
+        Scanner tr = new Scanner(System.in);
+
+        int x = tr.nextInt();
+        tr.nextLine();
+
+        ArrayList diary = new ArrayList();
+        for (int i = 0; i < x; i++) {
+            String name = tr.nextLine();
+            if (diary.contains(name)){
+                System.out.println("YES");
+            }
+            else {
+                System.out.println("NO");
+                diary.add(name);
+            }       
+        }
+    }// end of Tom Riddle's Diary @author:AlundayKylaKate(855A)
+
+    public static void PieRules(){  
+        Scanner pie = new Scanner(System.in);
+        int a = pie.nextInt();
+
+        int x[] = new int[a+1];
+        int sumix[] = new int [a+1];
+        
+        for (int i = 0; i < a; i++) {
+            x[i] = pie.nextInt();
+        }
+
+        sumix[a] = 0;
+        int dope[] = new int [a+1];
+        for (int i = a-1; i >= 0; i--) {
+            sumix[i] = sumix[i+1] + x[i];
+            dope[i] = Math.max(dope[i+1], sumix[i+1] - dope[i+1] + x[i]);
+        }
+        System.out.println((sumix[0] - dope[0]) + " " + dope[0]);
+    }// end of Pie Rules @author:AlundayKylaKate(859C)
+
+    public static void Whichfloor(){
+        Scanner wf = new Scanner(System.in);
+        int a = wf.nextInt();
+        int b = wf.nextInt();
+
+        int ab = 0;
+        int[][] c = new int[b][2];
+
+        for (int i = 0; i < b; i++) {
+            c[i][0] = wf.nextInt();
+            c[i][1] = wf.nextInt();
+        }
+
+        for (int i = 1; i <=100; i++) {
+            boolean fail = false;
+            for (int j = 0; j < b; j++) {
+                if(0 <= i*c[j][1] - c[j][0] && i*c[j][1] - c[j][0] < i){
+                }
+                else {
+                    fail = true;
+                    break;
+                }
+            }
+            if(!fail) {
+                if(ab == 0){
+                    ab = (int)Math.ceil((double)a/i);
+                }
+                else if (ab != (int)Math.ceil((double)a/i)){
+                    ab = -1;
+                }
+            }
+        }
+        System.out.println(ab);
+    }// end of Which floor @author:AlundayKylaKate(858B)
+
     public static String Fraction() {
         Scanner kbd = new Scanner(System.in);
         int n = kbd.nextInt();
