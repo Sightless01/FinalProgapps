@@ -314,7 +314,7 @@ public class Solution {
     		}
 		}//end of DidYouMean
 		
-		//Ivan Torcuato 
+		//Ivan Torcuato 859A
 		public static int declinedFinalist(int numFinalist, String list) {
 	
 			Scanner scan = new Scanner(list);
@@ -344,4 +344,33 @@ public class Solution {
 			}
 			
 		}
+		
+		//Ivan Torcuato 788B
+		 public static int nikitaAndStrings(String input) {
+
+	        int fst = 0;
+	        int snd = 0;
+	        int trd = 0;
+	        
+	        for (int i = 0; i < input.length(); i++) {
+	            
+	            if (input.charAt(i) == 'a') {
+	                
+	                fst++;
+	                trd++;
+	                
+	            } else {
+	                
+	                snd++;
+	                
+	            }
+	            
+	            snd = Math.max(fst, snd);
+	            trd = Math.max(trd, snd);
+	            
+	        }
+	        
+	        return trd;
+	        
+	    }
 } // end of Solution
