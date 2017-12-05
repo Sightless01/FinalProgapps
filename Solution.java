@@ -447,4 +447,104 @@ public class Solution {
 	        return trd;
 	        
 	    }
+		
+	//Viloria, Brendon Bruce 867A,859B,876A
+	public static String betweenOffices(int n,int a,int b){
+		Scanner input = new Scanner(System.in);
+		
+		n = input.nextInt();
+		a = 0;
+		b = 0;
+		
+		if(2<=n && n<=100 ){
+
+			String s = input.next();
+
+			for (int i = 1; i < n; i++) {
+				if (s.charAt(i - 1) == 'S' && s.charAt(i) == 'F') {
+					a++;
+              	} else if (s.charAt(i - 1) == 'F' && s.charAt(i) == 'S') {
+                    b++;
+               	}
+	        }	        
+		}
+		if(a > b){
+	        return "YES";
+	    } else {
+	    	return "NO";
+	    }
+		
+	}// end of 867A - between offices
+	
+	public static int lazySecurityGuard(int n){
+		Scanner input = new Scanner(System.in);
+		n = input.nextInt();
+		int big = -1;
+		if(1<=n && n<=1000000){
+            for (int i = 1; i < 1001; i++) {
+                if (i * i >= n) {
+                    big = i;
+                    break;
+                }
+            }
+		}
+		if (big * big == n) {
+                return big * 4;
+            }else{
+                big--;
+                int x = n - big * big;
+                if (x <= big) {
+                    return (2 * (big + big + 1));
+                }else{
+                	return ((big + 1) * 4);
+            	}
+        	}	
+	}// end of 859B - lazy security guard
+	
+	
+	public static int tripForAMeal(int n){
+		Scanner input = new Scanner(System.in);
+
+		n = input.nextInt();
+		int a = input.nextInt();
+		int b = input.nextInt();
+		int c = input.nextInt();
+		int sum = 0;
+		int t = 1;
+		int min = Integer.MAX_VALUE;
+		int p =1;
+
+		while(t < n) {
+			if(p == 1) {
+				min = Math.min(a, b);
+				if(min==a) {
+					sum+=a;
+					p=2;
+				}else {
+					sum+=b;
+		            p=3;
+		        }
+		    }else if(p==2) {
+		    	min = Math.min(a, c);
+		    	if(min==a) {
+		    		sum+=a;
+		            p=1;
+		        }else{
+		        	sum+=c;
+		        	p=3;
+		        }
+		    } else {
+		    	min = Math.min(b, c);
+		    	if(min==b)  {
+		    		sum+=b;
+		    		p=1;
+		    	}else {
+		    		sum+=c;
+		    		p=2;
+		    	}
+		    }
+		    t++;
+		    }
+		return sum;
+	}// end of 876A
 } // end of Solution
