@@ -353,9 +353,9 @@ public class Solution {
 		int n;
 		int t;
 	
-		t = Integer.parseInt(kbd.next());
+		t = kbd.nextInt();
 		while(t-- != 0) {
-			n = Integer.parseInt(kbd.next());
+			n = kbd.nextInt();
 			
 			if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11) {
 				ans = -1;
