@@ -315,8 +315,7 @@ public class Solution {
 		for(int x = 1; x < a; x++) {
 			
 		int c = in.nextInt();
-			if(c > b) {
-				k = 1;
+			if(c > b) {				k = 1;
 				b = c;
 			} else {
 				k++;
@@ -329,7 +328,7 @@ public class Solution {
 		
 	}// end of 879B - Table Tennis 
 	
-	//Almayda, Audry Jane 851A, 877C, 870C
+	//Almayda, Audry Jane 851A, 870C, 877C
 	public static int arpaAndAResearchInMexicanWave(int n, int k, int t) {
 		
 		Scanner kbd = new Scanner(System.in);
@@ -344,7 +343,33 @@ public class Solution {
 		} else {
 			return(Math.max(0, k - (t - n)));
 		}
-	}//end of 851 - Arpa and a Research in Mexican Wave
+	}//end of 851A - Arpa and a Research in Mexican Wave
+		
+
+	public static int maximumSplitting() {
+		
+		Scanner kbd = new Scanner(System.in);
+		int ans;
+		int n;
+		int t;
+	
+		t = Integer.parseInt(kbd.next());
+		while(t-- != 0) {
+			n = Integer.parseInt(kbd.next());
+			
+			if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11) {
+				ans = -1;
+			} else if (n % 2 == 1) {
+				ans = (n - 9) / 4 + 1;
+			} else { ans = n / 4;
+		}
+		return ans;
+		}
+	return t;
+	
+	}//end of 870C - Maximum Splitting
+
+
 
 //fayps uncoverted 858C
 	public class DidYouMean {
