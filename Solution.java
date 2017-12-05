@@ -450,7 +450,6 @@ public class Solution {
 		
 	//Viloria, Brendon Bruce 867A,859B,876A
 	public static String betweenOffices(int n,int a,int b){
-		Scanner input = new Scanner(System.in);
 		
 		n = input.nextInt();
 		a = 0;
@@ -477,7 +476,6 @@ public class Solution {
 	}// end of 867A - between offices
 	
 	public static int lazySecurityGuard(int n){
-		Scanner input = new Scanner(System.in);
 		n = input.nextInt();
 		int big = -1;
 		if(1<=n && n<=1000000){
@@ -503,7 +501,6 @@ public class Solution {
 	
 	
 	public static int tripForAMeal(int n){
-		Scanner input = new Scanner(System.in);
 
 		n = input.nextInt();
 		int a = input.nextInt();
