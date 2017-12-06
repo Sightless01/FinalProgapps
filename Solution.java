@@ -475,26 +475,25 @@ public class Solution {
 		
 	//Viloria, Brendon Bruce 867A,859B,876A
 	public static String betweenOffices(int n,int a,int b){
-		
-		n = input.nextInt();
+        n = input.nextInt();
 		a = 0;
 		b = 0;
 		
 		if(2<=n && n<=100 ){
 
 			String s = input.next();
-
-			for (int i = 1; i < n; i++) {
-				if (s.charAt(i - 1) == 'S' && s.charAt(i) == 'F') {
-					a++;
-              	} else if (s.charAt(i - 1) == 'F' && s.charAt(i) == 'S') {
+            for (int i = 1; i < n; i++) {
+            	
+            	if (s.charAt(i - 1) == 'S' && s.charAt(i) == 'F') {
+            		a++;
+            	} else if (s.charAt(i - 1) == 'F' && s.charAt(i) == 'S') {
                     b++;
-               	}
+                }
 	        }	        
 		}
 		if(a > b){
-	        return "YES";
-	    } else {
+			return "YES";
+		} else {
 	    	return "NO";
 	    }
 		
@@ -513,20 +512,18 @@ public class Solution {
 		}
 		if (big * big == n) {
                 return big * 4;
-            }else{
-                big--;
-                int x = n - big * big;
-                if (x <= big) {
-                    return (2 * (big + big + 1));
-                }else{
-                	return ((big + 1) * 4);
-            	}
-        	}	
+        }else{
+        	big--;
+        	int x = n - big * big;
+        	if (x <= big) {
+        		return (2 * (big + big + 1));
+        	}else{
+        		return ((big + 1) * 4);
+            }
+        }	
 	}// end of 859B - lazy security guard
 	
-	
 	public static int tripForAMeal(int n){
-
 		n = input.nextInt();
 		int a = input.nextInt();
 		int b = input.nextInt();
@@ -566,11 +563,10 @@ public class Solution {
 		    	}
 		    }
 		    t++;
-		    }
+		}
 		return sum;
-	}// end of 876A
-		
-		
+	}// end of 876A - trip for a meal
+			
 	//  Justine Garcia
 	public static String ArtfulExpedient (int m, String j, String k) {
 	    String array1[] = j.split(" ");
