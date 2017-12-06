@@ -327,19 +327,25 @@ public class Solution {
 		} else {
 			return(Math.max(0, k - (t - n)));
 		}
-	}//end of 851A - Arg
+	}//end of 851A - Arpa and a Research in Mexican wave
 
-	public static int maximumSplitting(int ans, int n, int t) {
+	public static int splitMaximum(int ans, int n, int t) {
 		
 		t = kbd.nextInt();
 		while(t-- != 0) {
 			n = kbd.nextInt();
 			
-			if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11) {
-				ans = -1;
-			} else if (n % 2 == 1) {
-				ans = (n - 9) / 4 + 1;
-			} else { ans = n / 4;
+			if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11) 
+			{
+			ans = -1;
+			} 
+			else if (n % 2 == 1) 
+			{
+			ans = (n - 9) / 4 + 1;
+			}
+			else 
+			{
+			ans = n / 4;
 		}
 		return ans;
 		}
