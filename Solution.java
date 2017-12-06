@@ -1,29 +1,21 @@
 import java.util.*;
 
 public class Solution {
-    public static void TomRiddle(){
-        Scanner tr = new Scanner(System.in);
-
-        int x = tr.nextInt();
-        tr.nextLine();
-
+    public static String TomRiddle(int x){
         ArrayList diary = new ArrayList();
         for (int i = 0; i < x; i++) {
             String name = tr.nextLine();
             if (diary.contains(name)){
-                System.out.println("YES");
+               return ("YES");
             }
             else {
-                System.out.println("NO");
+                return ("NO");
                 diary.add(name);
             }       
         }
     }// end of Tom Riddle's Diary @author:AlundayKylaKate(855A)
 
-    public static void PieRules(){  
-        Scanner pie = new Scanner(System.in);
-        int a = pie.nextInt();
-
+   public static String PieRules(int a){  
         int x[] = new int[a+1];
         int sumix[] = new int [a+1];
         
@@ -37,14 +29,11 @@ public class Solution {
             sumix[i] = sumix[i+1] + x[i];
             dope[i] = Math.max(dope[i+1], sumix[i+1] - dope[i+1] + x[i]);
         }
-        System.out.println((sumix[0] - dope[0]) + " " + dope[0]);
+        return (sumix[0] - dope[0]) + " " + dope[0]);
     }// end of Pie Rules @author:AlundayKylaKate(859C)
 
-    public static void Whichfloor(){
-        Scanner wf = new Scanner(System.in);
-        int a = wf.nextInt();
-        int b = wf.nextInt();
-
+   
+     public static int Whichfloor(int a, int b){      	
         int ab = 0;
         int[][] c = new int[b][2];
 
@@ -72,7 +61,7 @@ public class Solution {
                 }
             }
         }
-        System.out.println(ab);
+        return ab;
     }// end of Which floor @author:AlundayKylaKate(858B)
 
     public static String Fraction() {
@@ -343,8 +332,7 @@ public class Solution {
 		} else {
 			return(Math.max(0, k - (t - n)));
 		}
-	}//end of 851A - Arpa and a Research in Mexican Wave
-		
+	}//end of 851A - Arg
 
 	public static int maximumSplitting() {
 		
