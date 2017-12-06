@@ -261,31 +261,21 @@ public class Solution {
 		}
 	} // end of TimeRace
 
-	//Emeterio, Ricamelle 876A, 879A, 879B
-	public static int TripForMeal(int first, int second, int third, int fourth){
-		Scanner in = new Scanner(System.in);
+	//Emeterio, Ricamelle 865A, 879A, 879B
+	public static int SaveTheProblem(int a) {
+		Scanner in = new Scanner (System.in);
 		
-		 first = in.nextInt();
-		 second = in.nextInt();
-		 third = in.nextInt();
-		 fourth = in.nextInt();
-		
-		if (first == 1) {
-			return (0);
+		if (a == 1) {
+			return("1 1");
+			return("1");
 			
-		}else if (first == 2) {
-			return (Math.min(second,third));
+		} else {
+			return((a - 1)*2+ " " +2);
+			return("1 2");
 			
-		}else if (second <= third && second <= fourth) {
-			return ((first - 1) * second);
-			
-		}else if (third <= second && third < fourth) {
-			return ((first - 1) * third);
-			
-		}else {
-			return (Math.min(second, third) + (first - 2) * fourth);
 		}
-	}//end of 876A - trip for meal
+	}
+	}//end of 865A - Save the Problem
 	
 	public static int boryaDiagnosis(int a, int b){
 		 Scanner in = new Scanner(System.in);
