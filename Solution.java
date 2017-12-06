@@ -569,4 +569,36 @@ public class Solution {
 		    }
 		return sum;
 	}// end of 876A
+		
+		
+	//  Justine Garcia
+	public static String ArtfulExpedient (int m, String j, String k) {
+	    String array1[] = j.split(" ");
+	    String array2[] = k.split(" ");
+	    int ctr1 = (int) Math.pow(2,array1.length);
+	    int ctr2 = (int) Math.pow(2,array2.length);
+		if ( ctr1%2 == 0)  {
+	    	    return "Karen"; 
+		} else {
+		      return "Koyomi";
+		}
+	}// end of Artful Expedient
+	
+		
+	// Justine Garcia
+	public static int Maximum( int n,int k ) {
+           Scanner sc=new Scanner(System.in);
+           int[] arr=new int[n];
+           for (int i=0;i<n;i++) {
+               arr[i]=sc.nextInt();
+	   }
+           if (k==1) {
+               Arrays.sort(arr);
+               return arr[0];
+           } else if ( k==2 ) {
+               return (Math.max(arr[0],arr[n-1]);
+	   } else {
+               Arrays.sort(arr);
+               return arr[n-1]);
+        } // end of Maximum() 
 } // end of Solution
