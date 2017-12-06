@@ -331,11 +331,6 @@ public class Solution {
 	//Almayda, Audry Jane 851A, 870C, 877C
 	public static int arpaAndAResearchInMexicanWave(int n, int k, int t) {
 		
-		Scanner kbd = new Scanner(System.in);
-		n = kbd.nextInt();
-		k = kbd.nextInt();
-		t = kbd.nextInt();{
-
 		if( t <= k && t <= n) {
 			return (t);
 		} else if(t <= n) {
@@ -346,13 +341,8 @@ public class Solution {
 	}//end of 851A - Arpa and a Research in Mexican Wave
 		
 
-	public static int maximumSplitting() {
+	public static int maximumSplitting(int ans, int n, int t) {
 		
-		Scanner kbd = new Scanner(System.in);
-		int ans;
-		int n;
-		int t;
-	
 		t = kbd.nextInt();
 		while(t-- != 0) {
 			n = kbd.nextInt();
