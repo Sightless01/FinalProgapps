@@ -600,5 +600,34 @@ public class Solution {
 	   } else {
                Arrays.sort(arr);
                return arr[n-1]);
-        } // end of Maximum() 
+        } // end of Maximum()
+        
+        
+    // Lovelyn Paris 877A
+ 	public static String alexBrokenContest(String inp) {
+		Scanner sc = new Scanner( System.in );
+		String [] friendsName = {"Danil", "Olya", "Slava", "Ann", "Nikita"};
+		int sz = inp.length();
+		int ans = 0;
+		for(int i = 0; i < sz; i++ ) {
+			for( int j = i; j < sz; j++ ) {
+				String tmp = inp.substring( i, j+1 );
+				for( int k = 0; k < 5; k++ ) {
+					if( tmp.equals( friendsName[ k ] ) ) {
+						ans++;
+						break;
+					}
+				}
+			}
+		}
+		if( ans == 1 )
+			return("YES");
+		else 
+			return("NO");
+	} // end alexBrokenContest
+	
+	
+	
+	
+      
 } // end of Solution
