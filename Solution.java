@@ -609,7 +609,7 @@ public class Solution {
 	} // end alexBrokenContest
 	
 	
-	public static string fairGame(int input){
+	public static string fairGame(){
 		Scanner kbd = new Scanner(System.in); //assuming no scanner for the class, otherwise use that
 		int cardsNum = kbd.nextInt;
 		int cards[] = new int[cardsNum+1];
@@ -621,7 +621,36 @@ public class Solution {
 		if(cards[1]==cards[cardsNum/2] && cards[(cardsNum/2)]==cards[cardsNum] && cards[1]!=cards[cardsNum]){
 			return "YES" + cards[1] + " " + cards[cardsNum];
 		} else return "NO";
-	}
+	} // end of fair game
 	
+	public static long kRounding(){
+		Scanner kbd = new Scanner(System.in); //see fairgame
+		int input = kbd.nextInt();
+		int Nput = input;
+		int rounding = kbd.nextInt();
+		
+		int div2 = 0;
+		int div5 = 0;
+		
+		while (input % 2 == 0){
+			div2++;
+			input = input/2;
+		}
+		while (input % 5 == 0){
+			div5++;
+			input = input/5;
+		}
+		
+		int multiplierTwo = 1;
+		int multiplierFive = 1;
+		if(rounding - div2 > 0){
+			multiplierTwo = (int) Math.pow(2, rounding - div2);
+		}
+		if(rounding - div5 > 0){
+			multiplierFive = (int) Math.pow(5, rounding - div5)
+		}
+		
+		return multiplierTwo*(long)multiplierFive*(long)Nput;
+	} // end of k-rounding
       
 } // end of Solution
