@@ -609,7 +609,19 @@ public class Solution {
 	} // end alexBrokenContest
 	
 	
-	
+	public static string fairGame(int input){
+		Scanner kbd = new Scanner(System.in); //assuming no scanner for the class, otherwise use that
+		int cardsNum = kbd.nextInt;
+		int cards[] = new int[cardsNum+1];
+		for (int i = 1; i < cardsNum+1; i++){
+			cards[i] = kbd.nextInt();
+		}
+		
+		Arrays.sort(cards);
+		if(cards[1]==cards[cardsNum/2] && cards[(cardsNum/2)]==cards[cardsNum] && cards[1]!=cards[cardsNum]){
+			return "YES" + cards[1] + " " + cards[cardsNum];
+		} else return "NO";
+	}
 	
       
 } // end of Solution
