@@ -263,27 +263,7 @@ public class Solution {
         return string;
     } // end of DidYouMean
 
-	// justine garcia #868B
-	public static String TimeRace (int h, int m, int s, int t1, int t2) {
-		if (t1>t2) {
-			int temp=t1; t1=t2; t2=temp;
-		}
-		int ctr=0;
-		if (t1<=h && h<t2) {
-			ctr++;
-		} else if (t1<=(double)m/5 && (double)m/5<t2) {
-			ctr++;
-		} else if (t1<(double)s/5 && (double)s/5<t2) {
-			ctr++;
-		} else {
-
-		}
-		if (ctr==0 || ctr==3) {
-			return "YES";
-		} else {
-			return "NO";
-		}
-	} // end of TimeRace
+	
 
 	//Emeterio, Ricamelle 865A, 879A, 879B
 	public static int SaveTheProblem(int a) {
@@ -578,35 +558,75 @@ public class Solution {
 	}// end of 876A - trip for a meal
 
 	//  Justine Garcia
-	public static String ArtfulExpedient (int m, String j, String k) {
-	    String array1[] = j.split(" ");
-	    String array2[] = k.split(" ");
-	    int ctr1 = (int) Math.pow(2,array1.length);
-	    int ctr2 = (int) Math.pow(2,array2.length);
-		if ( ctr1%2 == 0)  {
-	    	    return "Karen";
-		} else {
-		      return "Koyomi";
+	public static String getWinner(String karenInput, String koyomiInput){
+	    String karenArray[] = karenInput.split(" ");
+	    String koyomiArray[] = koyomiInput.split(" ");
+	    int counter = (int) Math.pow(2,array1.length);
+		if(counter % 2 == 0)  
+		{
+	    	return "Karen";
+		} 
+		else 
+		{
+			return "Koyomi";
 		}
 	}// end of Artful Expedient
 
 
 	// Justine Garcia
-	public static int Maximum( int n,int k ) {
-           Scanner sc=new Scanner(System.in);
-           int[] arr=new int[n];
-           for (int i=0;i<n;i++) {
-               arr[i]=sc.nextInt();
-	   }
-           if (k==1) {
-               Arrays.sort(arr);
-               return arr[0];
-           } else if ( k==2 ) {
-               return (Math.max(arr[0],arr[n-1]);
-	   } else {
-               Arrays.sort(arr);
-               return arr[n-1]);
-        } // end of Maximum()
+	public static int getMaximum(int digit,int pair){
+   		Scanner sc=new Scanner(System.in);
+    	int[] input=new int[n];
+    	for(int i = 0; i < digit; i++) 
+		{
+        	input[i]=sc.nextInt();
+	    }
+        if(pair == 1)
+		{
+        	Arrays.sort(input);
+        	return input[0];
+        } else if(pair == 2) 
+		{
+        	return (Math.max(input[0],input[digit-1]);
+	    } else 
+		{
+        	Arrays.sort(input);
+            return input[digit-1]);
+    } // end of Maximum()
+		       
+ 	// justine garcia #868B
+	public static String raceOfTime(int hour, int minute, int second, int time1, int time2) {
+	    if(time1 > time2)
+	    {
+      		int temporary = time1;
+			time1 = time2;
+			time2 = temporary;
+	    }
+	    int counter = 0;
+	    if(time1 <= hour && hour < time2) 
+	    {
+	        counter++;
+	    } 
+	    else if(time1 <= (double)minute / 5 && (double)minute / 5 < time2) 
+	    {
+        	counter++;
+	    } 
+	    else if(time1 < (double)second / 5 && (double)second / 5 < time2) 
+	    {
+			counter++;
+		} 
+		else 
+		{
+		}
+		if(counter == 0 || counter == 3) 
+		{
+		    return "YES";
+		} 
+		else 
+		{
+		    return "NO";
+		}
+	} // end of TimeRace
 
 
     // Lovelyn Paris 877A
