@@ -716,6 +716,25 @@ public class Solution {
 
 	}// end of Classroom Watch @author:Paris,Lovelyn(875A)
 	
+	// Lovelyn Paris 873B
+	public static int balancedString(int r, String d) {
+		HashMap<Integer,Integer> hash = new HashMap<>();
+		int variable1 = 0;
+		hash.put(0,-1);
+		int m = 0;
+
+		for(int i=0;i<r;i++){
+			
+			variable1 += d.charAt(i) == '1' ? 1 : -1;
+			if(hash.get(variable1) == null)
+				hash.put(variable1,i);
+			else
+				m = Math.max(m, i-hash.get(variable1));
+		}
+		System.out.println(m);
+		sc.close();
+
+    	}// end of 873B Balanced String @author:Paris,Lovelyn(873B)
 
 
 
@@ -728,7 +747,7 @@ public class Solution {
 		}
 
 		Arrays.sort(cards);
-		if (cards[1] == cards[cardsNum/2] && cards[(cardsNum/2)] == cards[cardsNum] && cards[1]!= cards[cardsNum]){
+		if(cards[1]==cards[cardsNum/2] && cards[(cardsNum/2)]==cards[cardsNum] && cards[1]!=cards[cardsNum]){
 			return "YES" + cards[1] + " " + cards[cardsNum];
 		} else return "NO";
 	} // end of fair game
@@ -763,21 +782,21 @@ public class Solution {
 		return multiplierTwo*(long)multiplierFive*(long)Nput;
 	} // end of k-rounding
 	
-	public int Chores() {
-	    Scanner kbd = new Scanner(System.in);
-	    int n = 0;
-	    int k = 0;
-	    int x = 0;
-	    int sum = 0, 
+	public class Chores {
+	        Scanner kbd = new Scanner(System.in);
+	        int n = 0;
+	        int k = 0;
+	        int x = 0;
+	        int sum = 0, 
 
-	    n = kbd.nextInt();
-	    k = kbd.nextInt();
-	    x = kbd.nextInt();
-	    for(int i = 0; i < n-k; i++){
-	        int ctr = kbd.nextInt();
-	        sum += ctr;
-	        }
-	    return (sum +k*x);
+	        n = jin.nextInt();
+	        k = jin.nextInt();
+	        x = jin.nextInt();
+	        for(int i = 0; i < n-k; i++){
+	        	int ctr = kbd.nextInt();
+	        	sum += ctr;
+	        	}
+	        return (sum +k*x);
 	}
 
 } // end of Solution
