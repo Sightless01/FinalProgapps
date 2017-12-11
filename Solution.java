@@ -728,7 +728,7 @@ public class Solution {
 		}
 
 		Arrays.sort(cards);
-		if(cards[1]==cards[cardsNum/2] && cards[(cardsNum/2)]==cards[cardsNum] && cards[1]!=cards[cardsNum]){
+		if (cards[1] == cards[cardsNum/2] && cards[(cardsNum/2)] == cards[cardsNum] && cards[1]!= cards[cardsNum]){
 			return "YES" + cards[1] + " " + cards[cardsNum];
 		} else return "NO";
 	} // end of fair game
@@ -763,21 +763,21 @@ public class Solution {
 		return multiplierTwo*(long)multiplierFive*(long)Nput;
 	} // end of k-rounding
 	
-	public class Chores {
-	        Scanner kbd = new Scanner(System.in);
-	        int n = 0;
-	        int k = 0;
-	        int x = 0;
-	        int sum = 0, 
+	public int Chores() {
+	    Scanner kbd = new Scanner(System.in);
+	    int n = 0;
+	    int k = 0;
+	    int x = 0;
+	    int sum = 0, 
 
-	        n = jin.nextInt();
-	        k = jin.nextInt();
-	        x = jin.nextInt();
-	        for(int i = 0; i < n-k; i++){
-	        	int ctr = kbd.nextInt();
-	        	sum += ctr;
-	        	}
-	        return (sum +k*x);
+	    n = kbd.nextInt();
+	    k = kbd.nextInt();
+	    x = kbd.nextInt();
+	    for(int i = 0; i < n-k; i++){
+	        int ctr = kbd.nextInt();
+	        sum += ctr;
+	        }
+	    return (sum +k*x);
 	}
 
 } // end of Solution
