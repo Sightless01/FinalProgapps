@@ -598,7 +598,7 @@ public class Solution {
         } // end of getMaximum()
 		       
  	// justine garcia #868B
-	public static String raceOfTime(int hour, int minute, int second, int time1, int time2) {
+	public static String raceOfTime(int hour, int minute, int second, int time1, int time2){
 	    if(time1 > time2)
 	    {
       		int temporary = time1;
