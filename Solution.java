@@ -676,5 +676,22 @@ public class Solution {
 
 		return multiplierTwo*(long)multiplierFive*(long)Nput;
 	} // end of k-rounding
+	
+	public class Chores {
+	        Scanner kbd = new Scanner(System.in);
+	        int n = 0;
+	        int k = 0;
+	        int x = 0;
+	        int sum = 0, 
+
+	        n = jin.nextInt();
+	        k = jin.nextInt();
+	        x = jin.nextInt();
+	        for(int i = 0; i < n-k; i++){
+	        	int ctr = kbd.nextInt();
+	        	sum += ctr;
+	        	}
+	        return (sum +k*x);
+	}
 
 } // end of Solution
