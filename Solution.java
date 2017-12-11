@@ -630,8 +630,37 @@ public class Solution {
 		{
 			System.out.println("NO");
 		}
+	}// end of Alex And Broken Contest @author:Paris,Lovelyn(877A)
+	
+	public static String classroomWatch (int n) {
+		ArrayList<Integer> ans = new ArrayList<>();
+
+		for (int i = 1; i <= 9 * 9; i++) {
+			if(n <= i)
+				break;
+			else {
+				int x = n - i;
+				int c = 0;
+				int t = x;
+				while(t > 0) {
+					c += t % 10;
+					t /= 10;
+				}
+				if(c == i) 
+					ans.add(x);
+			}
+		}
+
+		System.out.println(ans.size());
+		Collections.sort(ans);
+		for (int i = 0; i < ans.size(); i++){
+			System.out.print(ans.get(i) + " ");
+
+		}
+
 	}
-}// end of Alex And Broken Contest @author:Paris,Lovelyn(877A)
+	
+
 
 
 	public static string fairGame(){
