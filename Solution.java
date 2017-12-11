@@ -562,46 +562,48 @@ public class Solution {
 	    String karenArray[] = karenInput.split(" ");
 	    String koyomiArray[] = koyomiInput.split(" ");
 	    int counter = (int) Math.pow(2,array1.length);
-		if(counter % 2 == 0)  
-		{
+	    if(counter % 2 == 0)  
+            {
 	    	return "Karen";
-		} 
-		else 
-		{
-			return "Koyomi";
-		}
-	}// end of Artful Expedient
+	    } 
+	    else 
+	    {
+		return "Koyomi";
+	    }
+	}// end of getWinner
 
 
 	// Justine Garcia
 	public static int getMaximum(int digit,int pair){
-  	 	Scanner sc=new Scanner(System.in);
-    	int[] input=new int[n];
-    	for(int i = 0; i < digit; i++) 
-		{
-        	input[i]=sc.nextInt();
+  	    Scanner sc = new Scanner(System.in);
+    	    int[] input = new int[n];
+    	    for(int i = 0; i < digit; i++) 
+	    {
+                input[i]=sc.nextInt();
 	    }
-        if(pair == 1)
-		{
-        	Arrays.sort(input);
+            if(pair == 1)
+	    {
+                Arrays.sort(input);
         	return input[0];
-        } else if(pair == 2) 
-		{
+            }
+	    else if(pair == 2) 
+	    {
         	return (Math.max(input[0],input[digit-1]);
-	    } else 
-		{
+	    } 
+	    else 
+	    {
         	Arrays.sort(input);
-            return input[digit-1];
-		}
-    } // end of Maximum()
+                return input[digit-1];
+	    }
+        } // end of getMaximum()
 		       
  	// justine garcia #868B
 	public static String raceOfTime(int hour, int minute, int second, int time1, int time2) {
 	    if(time1 > time2)
 	    {
       		int temporary = time1;
-			time1 = time2;
-			time2 = temporary;
+		time1 = time2;
+		time2 = temporary;
 	    }
 	    int counter = 0;
 	    if(time1 <= hour && hour < time2) 
@@ -614,19 +616,19 @@ public class Solution {
 	    } 
 	    else if(time1 < (double)second / 5 && (double)second / 5 < time2) 
 	    {
-			counter++;
-		} 
-		else 
-		{
-		}
-		if(counter == 0 || counter == 3) 
-		{
-		    return "YES";
-		} 
-		else 
-		{
-		    return "NO";
-		}
+		counter++;
+	    } 
+	    else 
+	    {
+	    }
+            if(ounter == 0 || counter == 3) 
+	    {
+                return "YES";
+	    } 
+	    else 
+	    {
+                return "NO";
+	    }
 	} // end of TimeRace
 
 
