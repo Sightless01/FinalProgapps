@@ -659,56 +659,62 @@ public class Solution {
 	} // end of TimeRace
 
 
-    // Lovelyn Paris 877A
+   	// Lovelyn Paris 877A
  	public static String alexBrokenContest(String s){
-		String[] name ={"Danil", "Olya", "Slava", "Ann","Nikita"};
-		int count =0;
-		for (int i=0;i<5;i++)
+		String[] names={"Danil", "Olya", "Slava", "Ann","Nikita"};
+		int count=0;
+		for (int i=0;i<5 ;i++)
 		{
+			
 			int index = s.indexOf(name[i]);
 			while (index!=-1)
 			{
+				
 				count++;
-				index = s.indexOf(name[i],index+1);
+				index=s.indexOf(name[i],index+1);
 			}
 		}
 		if(count==1)
 		{
-			System.out.println("YES");
+		
+		System.out.println("YES");
 		}
 		else
 		{
-			System.out.println("NO");
+
+		System.out.println("NO");
 		}
 	}// end of Alex And Broken Contest @author:Paris,Lovelyn(877A)
 	
-	public static String classroomWatch (int n) {
-		ArrayList<Integer> ans = new ArrayList<>();
 
-		for (int i = 1; i <= 9 * 9; i++) {
-			if(n <= i)
+	// Lovelyn Paris 875A
+	public static String classroomWatch (int number) {
+		ArrayList<Integer> answers = new ArrayList<>();
+
+		for (int i=1; i<=9*9; i++) {
+			if(number<=i)
 				break;
 			else {
-				int x = n - i;
-				int c = 0;
-				int t = x;
+				int variables1=number - i; 
+				int variables2=0; 
+				int variables3=variables1; 
 				while(t > 0) {
-					c += t % 10;
-					t /= 10;
+					variables2+=variables3 % 10;
+					variables3/=10;
 				}
-				if(c == i) 
-					ans.add(x);
+				if(variables2==i) 
+					answers.add(x);
 			}
 		}
 
-		System.out.println(ans.size());
-		Collections.sort(ans);
-		for (int i = 0; i < ans.size(); i++){
-			System.out.print(ans.get(i) + " ");
+		System.out.println(answers.size());
+		Collections.sort(answers);
+		for (int i = 0; i < answers.size(); i++){
+			System.out.print(answers.get(i) + " ");
 
 		}
 
-	}
+	}// end of Classroom Watch @author:Paris,Lovelyn(875A)
 	
 
 
