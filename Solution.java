@@ -610,27 +610,28 @@ public class Solution {
 
 
     // Lovelyn Paris 877A
- 	public static String alexBrokenContest(String inp) {
-		Scanner sc = new Scanner( System.in );
-		String [] friendsName = {"Danil", "Olya", "Slava", "Ann", "Nikita"};
-		int sz = inp.length();
-		int ans = 0;
-		for(int i = 0; i < sz; i++ ) {
-			for( int j = i; j < sz; j++ ) {
-				String tmp = inp.substring( i, j+1 );
-				for( int k = 0; k < 5; k++ ) {
-					if( tmp.equals( friendsName[ k ] ) ) {
-						ans++;
-						break;
-					}
-				}
+ 	public static String alexBrokenContest(String s){
+		String[] name ={"Danil", "Olya", "Slava", "Ann","Nikita"};
+		int count =0;
+		for (int i=0;i<5;i++)
+		{
+			int index = s.indexOf(name[i]);
+			while (index!=-1)
+			{
+				count++;
+				index = s.indexOf(name[i],index+1);
 			}
 		}
-		if( ans == 1 )
-			return("YES");
+		if(count==1)
+		{
+			System.out.println("YES");
+		}
 		else
-			return("NO");
-	} // end alexBrokenContest
+		{
+			System.out.println("NO");
+		}
+	}
+}// end of Alex And Broken Contest @author:Paris,Lovelyn(877A)
 
 
 	public static string fairGame(){
