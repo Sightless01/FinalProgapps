@@ -323,8 +323,8 @@ public class Solution {
 
 	}// end of 879B - Table Tennis
 
-	//Almayda, Audry Jane 851A, 870C, 877C
-	public static int arpaAndAResearchInMexicanWave(int n, int k, int t) {
+	//Almayda, Audry Jane 851A, 870C, 873A`
+	public static int getSpectators(int n, int k, int t) {
 
 		if( t <= k && t <= n) {
 			return (t);
@@ -333,7 +333,7 @@ public class Solution {
 		} else {
 			return(Math.max(0, k - (t - n)));
 		}
-	}//end of 851A - Arpa and a Research in Mexican wave
+	}//end of 851A - getSpectators
 
 	public static int splitMaximum(int ans, int n, int t) {
 
@@ -357,7 +357,28 @@ public class Solution {
 		}
 	return t;
 
-	}//end of 870C - Maximum Splitting
+	}//end of 870C - splitMaximum
+
+    public static int getChores(int numOfChores, int maxNumOfChores, int unitOfTime) {
+        int numOfChores = sc.nextInt();
+        int maxNumOfChores = sc.nextInt();
+        int unitOfTime = sc.nextInt();
+        int total = 0;
+
+        for(int i = 0; i < numOfChores; i++) {
+
+            if(i >= numOfChores - maxNumOfChores) {
+                total += unitOfTime;
+            } else {
+                total += sc.nextInt();
+            }
+
+        }
+
+        System.out.println(total);
+    }//end of 873A - getChores
+
+
 
 
 
