@@ -324,59 +324,63 @@ public class Solution {
 	}// end of 879B - Table Tennis
 
 	//Almayda, Audry Jane 851A, 870C, 873A`
-	public static int getSpectators(int n, int k, int t) {
-
-		if( t <= k && t <= n) {
-			return (t);
-		} else if(t <= n) {
-			return (k);
-		} else {
-			return(Math.max(0, k - (t - n)));
-		}
+	public static int getSpectators(int n, int k, int t){
+	    if( t <= k && t <= n)
+	    {
+	        return (t);
+	    }
+	    else if(t <= n) 
+	    {
+ 	        return (k);
+	    } 
+	    else 
+	    {
+		return(Math.max(0, k - (t - n)));
+	    }
 	}//end of 851A - getSpectators
 
-	public static int splitMaximum(int ans, int n, int t) {
-
-		t = kbd.nextInt();
-		while(t-- != 0) {
-			n = kbd.nextInt();
-
-			if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11)
-			{
-			ans = -1;
-			}
-			else if (n % 2 == 1)
-			{
-			ans = (n - 9) / 4 + 1;
-			}
-			else
-			{
-			ans = n / 4;
+	public static int splitMaximum(int ans, int n, int t){
+	    t = kbd.nextInt();
+	    while(t-- != 0) 
+	    {
+	        n = kbd.nextInt();
+		if(n == 1 || n == 2 || n == 3 || n == 5 || n == 7 || n == 11)
+		{
+		    ans = -1;
+		}
+		else if (n % 2 == 1)
+		{
+		    ans = (n - 9) / 4 + 1;
+		}
+		else
+		{
+		    ans = n / 4;
 		}
 		return ans;
 		}
 	return t;
-
 	}//end of 870C - splitMaximum
 
-    public static int getChores(int numOfChores, int maxNumOfChores, int unitOfTime) {
-        int numOfChores = sc.nextInt();
-        int maxNumOfChores = sc.nextInt();
-        int unitOfTime = sc.nextInt();
-        int total = 0;
+   	 public static int getChores(int numOfChores, int maxNumOfChores, int unitOfTime){
+             numOfChores = sc.nextInt();
+             maxNumOfChores = sc.nextInt();
+             unitOfTime = sc.nextInt();
+             total = 0;
 
-        for(int i = 0; i < numOfChores; i++) {
+             for(int i = 0; i < numOfChores; i++) 
+	     {
+	         if(i >= numOfChores - maxNumOfChores)
+		 {
+                     total += unitOfTime;
+                 }
+		 else 
+		 {
+                     total += sc.nextInt();
+                 }
 
-            if(i >= numOfChores - maxNumOfChores) {
-                total += unitOfTime;
-            } else {
-                total += sc.nextInt();
-            }
-
-        }
-
-        System.out.println(total);
-    }//end of 873A - getChores
+              }
+	     System.out.println(total);
+        }//end of 873A - getChores
 
 
 
