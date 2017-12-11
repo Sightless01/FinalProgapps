@@ -575,7 +575,7 @@ public class Solution {
 
 	// Justine Garcia
 	public static int getMaximum(int digit,int pair){
-   		Scanner sc=new Scanner(System.in);
+  	 	Scanner sc=new Scanner(System.in);
     	int[] input=new int[n];
     	for(int i = 0; i < digit; i++) 
 		{
@@ -591,7 +591,8 @@ public class Solution {
 	    } else 
 		{
         	Arrays.sort(input);
-            return input[digit-1]);
+            return input[digit-1];
+		}
     } // end of Maximum()
 		       
  	// justine garcia #868B
